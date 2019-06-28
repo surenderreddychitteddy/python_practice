@@ -1,0 +1,4 @@
+'''Below pattern will match with the ipaddress for which the character before it is a space/@/beginning if the string.
+   and ends with a white-space/'/'(front-slash)/end of string '''
+
+ipaddress_regex = r'(^|\s|\@)((?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))(\s|$|/)'
