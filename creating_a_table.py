@@ -23,7 +23,12 @@ def table_creation(connection,cursor,req_table):
 		print(str(e))
 		return ""
     
-    
+
+def db_close(connection,cursor):
+	cursor.close()
+	connection.close()
+	
+	
 def insert_values(connection,cursor,table_obj):
 	try:
 		for each_table in table_obj:
@@ -55,7 +60,6 @@ def insert_values(connection,cursor,table_obj):
 		print(str(e))
 		return ""
     
- 
     
 mydb = connecting_to_database.connection 
 
