@@ -45,7 +45,7 @@ def insert_values(connection,cursor,table_obj):
 					print(each_table+' table Data inserted successfully')
 				elif each_table=='users':
 					sql = "INSERT INTO users (username,password,firstname,lastname,email_id) VALUES (%s,%s,%s,%s,%s)"
-					val = [('admin',),('surender',),('reddy',)]
+					val = [('admin','password','surender','reddy','surender.chitteddy@email.com')]
 					cursor.executemany(sql,val)
 					connection.commit()
 					print(each_table+' table Data inserted successfully')
